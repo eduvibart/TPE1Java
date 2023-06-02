@@ -3,54 +3,31 @@ package ejercicio4;
 public class FotografiaArtistica {
 
 	public static void main(String[] args) {
-		char A[]= {'.', 'f', 'a', 'a', '.', 'e', '.', 'f'};
-		//int X=;
-		//int Y=
-
+		char A[]= {'.', 'f', 'a', '.', 'e', '.', '.', 'f'};
+		int X=1;
+		int Y=2;
+		int N=A.length;
+		System.out.println(fotografiaArtistica(A,N,X,Y));
 	}
 	
 	public static int fotografiaArtistica(char A[], int N, int X, int Y) {
 		int resultado=0;
-		int i=0;
 		//recorro primero de izquierda a derecha
-		while ((i<N)&&(X+i<N)) {
-			if (A[i]=='f') {
-				int posicionValidaArtista=i+X;
-				while ((posicionValidaArtista<i+Y)&&(posicionValidaArtista<N)) {
-					if (A[posicionValidaArtista]=='a') {
-						int posicionValidaEscenario=posicionValidaArtista+X;
-						while ((posicionValidaEscenario<posicionValidaArtista+Y)&&(posicionValidaEscenario<N)) {
-							if (A[posicionValidaEscenario]=='e') {
-								resultado++;
-							}
-							posicionValidaEscenario++;
-						}
-					}
-					posicionValidaArtista++;
-				}
-			}
-			i++;
-		}
+		for (int i = 0; i+X < N; i++) {
+	        if (A[i] == 'f') {
+	            for (int j = i + X; j <= i + Y && j < N; j++) {
+	                if (A[j] == 'a') {
+	                    for (int k = j + X; k <= j + Y && k < N; k++) {
+	                        if (A[k] == 'e') {
+	                            resultado++;
+	                        }
+	                    }
+	                }
+	            }
+	        }
+	    }
 		//recorro de derecha a izquierda
-		i=N-1;
-		while((0<=i)&&(i-X>=0)) {
-			if (A[i]=='f') {
-				int posicionValidaArtista=i-X;
-				while ((posicionValidaArtista>=0)&&(posicionValidaArtista>i-Y)) {
-					if (A[posicionValidaArtista]=='a') {
-						int posicionValidaEscenario=posicionValidaArtista-X;
-						while((posicionValidaEscenario>posicionValidaArtista-Y)&&(posicionValidaEscenario>0)) {
-							if (A[posicionValidaEscenario]=='e') {
-								resultado++;
-							}
-							posicionValidaEscenario--;
-						}
-					}
-					posicionValidaArtista--;
-				}
-			}
-			i--;
-		}
+		//for (int i =N-1;i)
 		
 		return resultado;
 	}
