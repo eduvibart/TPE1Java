@@ -3,7 +3,7 @@ package ejercicio4;
 public class FotografiaArtistica {
 
 	public static void main(String[] args) {
-		char A[]= {'.', 'f', 'a', '.', 'e', '.', '.', 'f'};
+		char A[]= {'.', 'f', 'a', '.', 'e', 'a', '.', 'f'};
 		int X=1;
 		int Y=2;
 		int N=A.length;
@@ -27,7 +27,25 @@ public class FotografiaArtistica {
 	        }
 	    }
 		//recorro de derecha a izquierda
-		//for (int i =N-1;i)
+		for (int i = N-1; i-X>0; i--) {
+			
+			if (A[i]=='f') {
+				
+				for (int j=i-X;j>=i-Y && j>=0; j--) {
+					
+	                if (A[j] == 'a') {
+	                	
+	                	for (int k = j-X;k>=j-Y && k>=0;k--) {
+	                		
+	                		if (A[k] == 'e') {
+	                            resultado++;
+	                        }
+	                	}
+	                }
+
+				}
+			}
+		}
 		
 		return resultado;
 	}
