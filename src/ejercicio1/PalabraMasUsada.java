@@ -19,25 +19,25 @@ public class PalabraMasUsada {
 			
 			System.out.println("Ingrese el nombre del archivo del cual se quiere leer");
 			String nombreArchivo = lector.nextLine();
-			String currentDir = System.getProperty("user.dir");
-			String filePath = currentDir + File.separator + "ejercicio1" + File.separator + "entradas" + File.separator + nombreArchivo + ".txt";
+			String dir = System.getProperty("user.dir");
+			String ruta = dir + File.separator + "ejercicio1" + File.separator + "entradas" + File.separator + nombreArchivo + ".txt";
 
 			
-			StringBuilder content = new StringBuilder();
+			StringBuilder entrada = new StringBuilder();
 
-			try (BufferedReader reader = new BufferedReader(new FileReader(new File(filePath)))) {
+			try (BufferedReader reader = new BufferedReader(new FileReader(new File(ruta)))) {
 				
 			    String line;
 			    
 			    while ((line = reader.readLine()) != null) {
-			        content.append(line).append("\n");
+			        entrada.append(line).append("\n");
 			    }
 			    
 			} catch (IOException e) {
 			    e.printStackTrace();
 			}
 
-			String texto = content.toString();
+			String texto = entrada.toString();
 			System.out.println("La palabra mas repetida es: "+"'"+ palabraMasUsada(3, texto)+"'");
 		}
 		
@@ -87,7 +87,6 @@ public class PalabraMasUsada {
 				palabraActual.append(letra);
 			}
 		}
-		//System.out.println(cantidadMax);
 		return resultado;
 		
 	}

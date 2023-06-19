@@ -62,7 +62,7 @@ public class Node {
         return nodo;
     }
 	
-	public static void printBinaryTree(Node nodo, String espacio, boolean esUltimo) {
+	public static void imprimirArbol(Node nodo, String espacio, boolean esUltimo) {
 		
         if (nodo == null) {
             return;
@@ -83,8 +83,8 @@ public class Node {
 
         System.out.println(nodo.data);
 
-        printBinaryTree(nodo.left, espacio, false);
-        printBinaryTree(nodo.right, espacio, true);
+        imprimirArbol(nodo.left, espacio, false);
+        imprimirArbol(nodo.right, espacio, true);
     }
 	
 	

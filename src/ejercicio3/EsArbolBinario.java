@@ -6,7 +6,7 @@ public class EsArbolBinario {
 		
 		Node arbol = Node.construirArbolBinario();
 		
-		Node.printBinaryTree(arbol,"",true);
+		Node.imprimirArbol(arbol,"",true);
 		
 		if (esArbolBinario(arbol)) {
 			System.out.println("El arbol ingresado es binario");

@@ -11,14 +11,14 @@ public class FotografiaArtistica {
 	        Scanner scanner = new Scanner(System.in);
 	        
 	        System.out.println("Ingrese los valores del arreglo sin espacios (use '.', 'f', 'a' o 'e'):");
-	        String input = scanner.nextLine();
+	        String entrada = scanner.nextLine();
 	        
-	        for (int i = 0; i < input.length(); i++) {
-	            char character = input.charAt(i);
-	            if (character == '.' || character == 'f' || character == 'a' || character == 'e') {
-	                A.add(character);
+	        for (int i = 0; i < entrada.length(); i++) {
+	            char caracter = entrada.charAt(i);
+	            if (caracter == '.' || caracter == 'f' || caracter == 'a' || caracter == 'e') {
+	                A.add(caracter);
 	            } else {
-	                System.out.println("Valor inválido. Se omitirá el carácter: " + character);
+	                System.out.println("Valor inválido. Se omitirá el carácter: " + caracter);
 	            }
 	        }
 
