@@ -4,7 +4,7 @@ import java.awt.*;
 
 public class Main {
     public static void main(String[] args) {
-        Laberinto problema = new Laberinto();
+        Laberinto laberinto = new Laberinto();
 
         char[][] mapa1 =  {
                 {'E', '.', '.'},
@@ -30,10 +30,10 @@ public class Main {
                 {'#', 'a', '.', '.', '.'}
             };
 
-            problema.setProblema(mapa4,5,5);
-            Point inicio = problema.inicioLaberinto();
+            laberinto.setProblema(mapa4,5,5);
+            Point inicio = laberinto.inicioLaberinto();
             System.out.println("La posicion de inicio es : " + "("+ inicio.x+","+inicio.y+")");
-            System.out.println("El laberinto se puede resolver minimamente en: " + problema.recorrerLaberinto(inicio,-1,0) + " pasos");
+            System.out.println("El laberinto se puede resolver minimamente en: " + laberinto.recorrerLaberinto(inicio,-1,0) + " pasos");
         }
 
         public void imprimirMatriz(char [][]mapa){
