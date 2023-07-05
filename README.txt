@@ -12,3 +12,6 @@ Ejecicio 3: deteccion de arbol binario. Se pide al usuario que ingrese el arbol 
 
 Ejercicio 4: fotografia artistica. Se pide al usuario que ingrese una secuencia de  '.', 'f', 'a' o 'e'	sin espacios como
  entrada para el algoritmo
+
+Ejercicio 5: Laberinto Magico.  En la clase Main, basta con usar el metodo setProblema sobre el Laberinto que se quiere resolver para 
+seleccionar el laberinto en cuestión. Se debe pasar (mapa,filas,columnas) en ese orden para que se resuelva de manera correcta.
