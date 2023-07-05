@@ -1,3 +1,5 @@
+package ejercicio5;
+
 import java.awt.*;
 
 public class Laberinto {
@@ -23,8 +25,8 @@ public class Laberinto {
         for (int i = 0; i < F; i++) {
             for (int j = 0; j < C; j++) {
                 if (mapa[i][j] == 'E') {
-                    int entradaFila = i;
-                    int entradaColumna = j;
+                    //int entradaFila = i;
+                    //int entradaColumna = j;
                     return new Point(i, j);
                 }
             }

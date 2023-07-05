@@ -4,12 +4,6 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-/**
- * 
- * @author Eduardo Vibart y Matias Fino
- * 
- */
-
 
 public class PalabraMasUsada {
 
@@ -20,7 +14,7 @@ public class PalabraMasUsada {
 			System.out.println("Ingrese el nombre del archivo del cual se quiere leer");
 			String nombreArchivo = lector.nextLine();
 			String dir = System.getProperty("user.dir");
-			String ruta = dir + File.separator + "ejercicio1" + File.separator + "entradas" + File.separator + nombreArchivo + ".txt";
+			String ruta = dir + File.separator + "src" + File.separator+ "ejercicio1" + File.separator + "entradas" + File.separator + nombreArchivo + ".txt";
 
 			
 			StringBuilder entrada = new StringBuilder();
@@ -42,12 +36,7 @@ public class PalabraMasUsada {
 		}
 		
 	}
-	/**
-	 * 
-	 * @param N un numero entero que indica la longitud minima para ser tenida en cuenta por el metodo
-	 * @param texto una cadena de caracteres que representa la entrada a ser procesada por el algoritmo. 
-	 * @return devuelve la palabra mas usada en el String texto
-	 */
+
 	public static String palabraMasUsada(int N, String texto) {
 		
 		String resultado = "";

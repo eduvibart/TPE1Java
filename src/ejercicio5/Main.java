@@ -1,3 +1,5 @@
+package ejercicio5;
+
 import java.awt.*;
 
 public class Main {
